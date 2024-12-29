@@ -1,18 +1,18 @@
-import java.util.Scanner;
-
 public class CalcolaQuadrato {
     public static void main(String[] args) {
-
-            Scanner scanner = new Scanner(System.in);
-
-            System.out.print("Inserisci un numero: ");
-
-             int numero = scanner.nextInt();
+       
+        Scanner scanner = new Scanner(System.in);
         
-             int quadrato = numero * numero;
+        System.out.print("Inserisci un numero: ");
         
-             System.out.println("Il quadrato di " + numero + " è " + quadrato);
+        int numero = scanner.nextInt();
         
-            scanner.close();
+        Calcolatore calcolatore = new Calcolatore();
+        
+        int quadrato = calcolatore.calcolaQuadrato(numero);
+        
+        System.out.println("Il quadrato di " + numero + " è " + quadrato);
+        
+        scanner.close();
     }
 }
